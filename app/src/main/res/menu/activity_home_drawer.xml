@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/menu_section_1">
+        <item
+            android:id="@+id/nav_refresh"
+            android:fontFamily="@font/open_sans_regular"
+
+            android:title="Refresh Current Data"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_change_jurisdiction"
+            android:fontFamily="@font/open_sans_regular"
+
+            android:title="Download Other Area's Data"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_change_survey"
+            android:fontFamily="@font/open_sans_regular"
+
+            android:title="Change Project"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_change_phase"
+            android:fontFamily="@font/open_sans_regular"
+
+            android:title="Change Phase"
+            android:visible="false"/>
+
+
+    </group>
+
+    <group android:id="@+id/menu_section_2">
+        <item
+            android:id="@+id/settings"
+
+            android:title="Settings"
+            />
+        <item
+            android:id="@+id/nav_help"
+
+            android:title="Help" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:fontFamily="@font/open_sans_regular"
+
+            android:title="About Us" />
+
+
+        <item
+            android:id="@+id/nav_logout"
+
+            android:title="Logout" />
+
+    </group>
+</menu>

@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingTop="3dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/appNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:theme="@style/textStyle" />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appNameTV">
+
+
+            <TextView
+                android:id="@+id/userNameId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userIconIV"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/header_profile_image_bh"
+                android:src="@drawable/user_icon"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="@+id/userNameId"
+                app:layout_constraintStart_toStartOf="@+id/userNameId"
+                app:layout_constraintTop_toBottomOf="@+id/userNameId" />
+
+            <LinearLayout
+                android:id="@+id/nameLayoutHomeHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/userIconIV"
+                app:layout_constraintStart_toStartOf="@+id/userIconIV"
+                app:layout_constraintTop_toBottomOf="@+id/userIconIV">
+
+                <TextView
+                    android:id="@+id/firstNameId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/lastNameId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/phoneLayoutHomeHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/nameLayoutHomeHeader"
+                app:layout_constraintStart_toStartOf="@+id/nameLayoutHomeHeader"
+                app:layout_constraintTop_toBottomOf="@+id/nameLayoutHomeHeader">
+
+                <TextView
+                    android:id="@+id/phoneNumberId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editProfileLayoutHomeHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="end"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/phoneLayoutHomeHeader"
+                app:layout_constraintStart_toStartOf="@+id/phoneLayoutHomeHeader"
+                app:layout_constraintTop_toBottomOf="@+id/phoneLayoutHomeHeader">
+
+                <TextView
+                    android:id="@+id/editProfileId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:onClick="editProfile"
+                    android:text="@string/edit_profile"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--survey tab-->
+        <RelativeLayout
+            android:id="@+id/survey_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userinfo"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/viewId1"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/projecttitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewId1"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:paddingTop="3dp"
+                android:text="Project :"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/surveylayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/projecttitle"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/surveynameIdTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:paddingTop="3dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/changeSurveyId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:onClick="changeProject"
+                    android:text="@string/change"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--phase tab-->
+        <RelativeLayout
+            android:id="@+id/phase_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/survey_tab"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/projectPhaseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:paddingTop="3dp"
+                android:text="Phase :"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/surveyPhaseLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/projectPhaseTitle"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/surveyPhaseNameIdTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:paddingTop="3dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/changeSurveyPhaseId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:onClick="changeProjectPhase"
+                    android:text="@string/change"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--jurisdiction tab-->
+        <RelativeLayout
+            android:id="@+id/jurisdiction_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phase_tab"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/view1Id"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorWhite"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/jurisdictionHeaderTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1Id"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+
+                android:text="Jurisdictions :"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"
+
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/assignJurisdictionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jurisdictionHeaderTV"
+                android:layout_marginTop="10dp">
+
+
+                <ImageView
+                    android:id="@+id/dummyImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_gravity="start"
+                    android:src="@drawable/ic_forward_arrow_for_dropdown"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/dummyImage"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/assignJurisdictionNameTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center|start"
+                        android:maxLines="1"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2.5"
+                        android:clickable="true"
+                        android:gravity="center|end"
+                        android:onClick="changeJurisdiction"
+                        android:text="      "
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/assignJurisdictionLayout"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/selectedJurisdictionRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/collapseArrowLV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/downArrowIV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_gravity="start"
+                            android:src="@drawable/ic_forward_arrow_for_dropdown" />
+
+                        <ImageView
+                            android:id="@+id/upArrowIV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_arrow_down"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/selectedJurisdictionNameTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="center|start"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/changeJurisdictionId"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:gravity="center|end"
+                            android:onClick="changeJurisdiction"
+                            android:text="@string/change"
+                            android:textColor="@color/colorWhite" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedJurisdictionHierachyLV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/selectedJurisdictionRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/changeJurisdictionId"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_alignParentRight="true"-->
+                    <!--                    android:layout_marginTop="1dp"-->
+                    <!--                    android:layout_marginRight="10dp"-->
+                    <!--                    android:clickable="true"-->
+                    <!--                    android:gravity="center"-->
+                    <!--                    android:onClick="changeJurisdiction"-->
+                    <!--                    android:text="@string/change"-->
+                    <!--                    android:textColor="@color/colorWhite" />-->
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

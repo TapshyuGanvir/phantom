@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Phantom1.appfragment.map.MapFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="@dimen/_5sdp"
+        app:contentInsetStartWithNavigation="@dimen/_8sdp"
+        app:contentInsetLeft="@dimen/_8sdp"
+        app:contentInsetStart="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/map_toolbar"
+            app:contentInsetStartWithNavigation="@dimen/_8sdp"
+            app:contentInsetLeft="@dimen/_8sdp"
+            app:contentInsetStart="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/map_d_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/transparentViewMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucentDark"
+        android:orientation="horizontal"/>
+
+    <FrameLayout
+        android:id="@+id/targetTvlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="50dp"
+        android:elevation="4dp"
+        android:outlineProvider="bounds"
+        android:paddingTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+            <!-- content -->
+            <LinearLayout
+                android:id="@+id/target_feature_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_60sdp"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/delivery_detail_view_bg"
+                android:elevation="@dimen/_8sdp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.25dp"
+                    android:layout_weight="0.05"
+                    android:background="@drawable/line"
+                    android:orientation="horizontal" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.95"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:weightSum="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/featureIndexLayout"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:background="@drawable/circle_t"
+                                android:gravity="center"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/target_count_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold"
+                                    />
+
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto700"
+                                android:gravity="start"
+                                android:layout_gravity="center"
+                                android:text=" Customer Name"
+                                android:textColor="#3A3A3A"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:gravity="end"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/mobile_number_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_margin="@dimen/_3sdp"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:drawableStart="@drawable/ic_baseline_local_phone_24"
+                                android:background="@drawable/callbtn"
+                                android:fontFamily="@font/roboto700"
+                                android:gravity="center"
+                                android:paddingEnd="@dimen/_15sdp"
+                                android:text="Call"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/address_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="No 64, Kings cross Underground station"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/locationCv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/translucentBlack"
+        android:clickable="true"
+        android:elevation="12dp"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/targetTvlayout">
+
+        <ImageView
+            android:id="@+id/locationIv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_location_red" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

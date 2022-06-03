@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topViewLinearId"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.37"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/reveloLogoinlogin"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+
+                    android:src="@drawable/shreelaljilogo"
+                    app:layout_constraintBottom_toTopOf="@+id/reveloTitleTV"
+                    app:layout_constraintEnd_toEndOf="@+id/reveloTitleTV"
+                    app:layout_constraintStart_toStartOf="@+id/reveloTitleTV" />
+
+                <TextView
+                    android:id="@+id/reveloTitleTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Shreelalji"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:textAppearance="@style/revelo"
+                    android:textColor="@color/accent_color"
+                    android:textSize="@dimen/_28sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/tagLineTV"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tagLineTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reveloTitleTV"
+                    android:gravity="center"
+                    android:text="Tagline"
+                    android:textColor="@color/accent_color"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:textStyle="italic"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.43"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:layout_marginBottom="@dimen/_25sdp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/usernameET"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/hint_username"
+                                android:imeOptions="actionNext"
+                                android:padding="@dimen/_10sdp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            app:passwordToggleDrawable="@drawable/password_eye"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/colorPrimaryDark">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/passwordET"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/hint_password"
+                                android:imeOptions="actionDone"
+                                android:inputType="textPassword"
+                                android:padding="@dimen/_10sdp"
+                                android:textSize="@dimen/_14sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_7sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_7sdp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/signInBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_7sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_log"
+                                android:text="@string/text_login"
+                                android:textColor="@color/colorWhite" />
+
+                            <Button
+                                android:id="@+id/resetBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_7sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_log"
+                                android:text="@string/text_reset"
+                                android:textColor="@color/colorWhite" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center"
+                android:textSize="@dimen/_10sdp"
+                android:text="@string/developed_b"
+                android:textAppearance="@style/developed_b"
+                app:drawableRightCompat="@drawable/revelo_logo" />
+
+            <!-- <ImageView
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:layout_alignParentBottom="true"
+                 android:layout_marginRight="5dp"
+                 android:layout_marginBottom="3dp"
+                 android:layout_toEndOf="@+id/company_name_tv"
+                 android:src="@drawable/revelo_logo" />-->
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

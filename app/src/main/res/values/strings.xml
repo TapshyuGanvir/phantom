@@ -1,0 +1,198 @@
+<resources>
+    <string name="app_name">Shreelalji</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or Register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password length must be more than 5 characters</string>
+
+    <!--login resourses.-->
+    <string name="title_revelo">Treasure Hunt</string>
+    <string name="title_tagline">Tagline</string>
+
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+
+    <string name="progress_title_login">Login</string>
+    <string name="progress_message_login">Please wait for a moment...</string>
+
+    <string name="text_login">LOG IN</string>
+    <string name="text_reset">Reset</string>
+
+    <string name="error_username_password">Please enter username and password</string>
+    <string name="error_username">Username can not be empty</string>
+    <string name="error_password">Password can not be empty</string>
+
+    <string name="error_security_server">Security Server URL not available.</string>
+    <string name="error_400_message">Something is wrong with your input... Please check and retry</string>
+    <string name="error_401_message">Entered Username or Password is incorrect.</string>
+    <string name="error_404_message">Something went wrong, Please check your server settings.</string>
+    <string name="error_403_message">The server understood the request, but is refusing to fulfill it.</string>
+    <string name="error_500_message">Internal Server Error,Please try after sometime.</string>
+    <string name="error_default_server_message">Internal Server Error,Please try again later.</string>
+
+    <string name="permission_internet_connection">Please check internet connection.</string>
+
+    <string name="developed_b">Developed by 6Simplex Software Solutions Pvt Ltd.</string>
+    <!--_________________________________________________________________________________________-->
+
+    <!--server setting-->
+    <string name="text_save">Save</string>
+    <string name="title_server_setting">Server Settings</string>
+    <string name="hint_app_server">Enter App Server Url</string>
+    <string name="hint_security_server">Enter Security Server Url</string>
+    <string name="hint_security_realmname">Enter Security Server Realm Name</string>
+
+    <string name="error_server_setting">Please Fill All Fields</string>
+    <string name="error_app_server_setting">Please Enter App Server</string>
+    <string name="error_app_security_server_setting">Please Enter Security Server</string>
+    <string name="error_app_security_realmname_setting">Please Enter Security Realm Name</string>
+
+    <string name="error_security_server_offline">No response received. Please ensure Security server is online.</string>
+    <string name="error_app_server_offline">No response received. Please ensure Revelo App Server is online.</string>
+    <string name="error_app_server_invalid">You have entered invalid App Server Url.</string>
+    <string name="error_security_server_invalid">You have entered invalid Security Server Url.</string>
+    <string name="success_security_server_online">Security Server is online !</string>
+
+    <!--home resources-->
+    <string name="tile_collect_data">Collect Data</string>
+    <string name="tile_upload_data">Upload Data</string>
+    <string name="tile_dashboard">Dashboard</string>
+    <string name="tile_change_jurisdictions">Change Jurisdictions</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="failed_to_connect_server_connect_exception">Unable to connect to Revelo Servers. \n \nPlease check your Internet connection or check with the Administrator if a scheduled maintenance of Revelo Servers is ongoing.</string>
+    <string name="failed_to_connect_server_timeout_exception">Unable to connect to Servers. \n \nPlease try again later.</string>
+    <string name="error_network_download">You are offline.Please turn on your network connection and try again!</string>
+
+    <string name="error_trail_running">Your trail is being recorded. First stop the trail.</string>
+    <string name="error_whereami_running">You are using Where Am I service to locate your current location. Please turn it off.</string>
+    <string name="error_data_have_upload">You have data for upload. First upload the data.</string>
+
+    <string name="title_refresh_data">Refresh Data</string>
+    <string name="message_refresh_data">Are you sure do you want refresh data?</string>
+
+    <string name="title_change_jurisdiction">Change Jurisdiction</string>
+    <string name="message_change_jurisdiction">Are you sure do you want change the jurisdiction?</string>
+
+    <string name="title_change_survey">Change Project</string>
+    <string name="message_change_survey">Are you sure do you want change the Project?</string>
+    <string name="message_no_survey_available">No project has been assigned to you. Please contact the administrator.</string>
+    <string name="message_no_phase_available">No phase has been assigned to you. Please contact the administrator.</string>
+
+    <string name="title_exit_app">Exit from application</string>
+    <string name="message_exit_app">Are you sure you want to exit?</string>
+
+    <string name="title_enable_location">Location</string>
+    <string name="message_enable_location">Enable location from system settings on your phone.</string>
+    <string name="message_location_not_found">Could not get your location. Try re-enabling device\'s location or changing your location.</string>
+
+    <string name="title_logout_app">Logout</string>
+    <string name="message_logout_app">Are you sure you want to logout?</string>
+
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_download">Download</string>
+    <string name="dialog_exit">Exit</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_setting">Settings</string>
+
+    <string name="title_help">Help</string>
+
+    <string name="about_us">    6Simplex Software Solutions Pvt. Ltd, Nagpur, Maharashtra, India is a geospatial software services and products development company that offers geospatial software solutions and consultancy services. We also provide consultation services to Government organizations that seek to enhance their technological capabilities and ability to use location based information to aid smoother functioning and decision making, ultimately improving the services they offer to their customers, i.e. the citizens.</string>
+    <string name="about_revelo">    Revelo is an advanced Mobile GIS based data lifecycle management platform that helps organizations visualize, analyze, collect and understand data in the context of their business domain. It improves their decision making capabilities and brings forth unique insights to help them make quicker and more effective decisions. It is vertical agnostic and provides tools for automatic data validation, easy change management, near real time data collection and analytics, user tracking, jurisdiction based security and geofencing.</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="text_next">Next Step</string>
+    <string name="text_update">Save Changes</string>
+
+
+    //========editing =============
+    <string name="dialog_message_creating_form">Creating form…</string>
+    <string name="error_selection_layer_fields_not_found">Something went wrong. Selection layer fields not found.</string>
+    <string name="error_selection_layer_name_not_found">Something went wrong. Selection layer name not found.</string>
+    <string name="error_try_sometime">Something went wrong. Try after sometime.</string>
+
+    <string name="switch_camera_button_alt">Switch camera</string>
+    <string name="delete_button_alt">Delete</string>
+    <string name="capture_button_alt">Capture</string>
+    <string name="gallery_button_alt">Gallery</string>
+    <string name="back_button_alt">Back</string>
+
+    <string name="text_time">Time : </string>
+    <string name="text_sec"> sec</string>
+    <string name="text_time_sec">Time : 0 sec</string>
+
+    <string name="error_video_not_recorded_properly">Video not recorded properly, retry recording again</string>
+    <string name="text_cannot_play_video">Cannot play this video </string>
+    <string name="error_reading_image">Error reading image file.</string>
+    <string name="error_reading_video">Error reading video file.</string>
+    <string name="error_reading_media_file">Error reading media file. Media file type undefined.</string>
+
+    <string name="delete_feature_title">Delete Feature</string>
+    <string name="delete_feature_message">Are you sure you want to delete this feature?</string>
+
+
+    //========upload =============
+
+    <string name="title_upload_data">Upload Data</string>
+    <string name="message_upload_data">Are you sure do you want upload data?</string>
+
+    <string name="upload_no_data_message">You don\'t have any data to upload.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tooltip_has_geometry">Contains geometry</string>
+    <string name="tooltip_missing_geometry">No geometry added</string>
+
+    //navigation view
+    <string name="first_name">First Name :</string>
+    <string name="last_name">Last Name :</string>
+    <string name="phone_number">Phone Number :</string>
+    <string name="change"><u>Change</u></string>
+    <string name="edit_profile"><u>Edit Profile</u></string>
+
+    <string name="unauthorized_access">User unauthorized</string>
+    <string name="permission_denied">Permission denied</string>
+
+
+    //================editing options==========================
+    <string-array name="drawing_geometry_type">
+        <item>Tap</item>
+        <item>Location</item>
+    </string-array>
+
+    <string-array name="buffer_unit">
+        <item>Feet</item>
+        <item>Meter</item>
+    </string-array>
+
+    <string-array name="buffer_direction">
+        <item>Center</item>
+        <item>Left</item>
+        <item>Right</item>
+    </string-array>
+
+
+    // map symbology color
+    <string name="pending">#fa2111</string>
+    <string name="incomplete">#f3f702</string>
+    <string name="complete">#02f71f</string>
+    <string name="targetdelivery">#3F7EE8</string>
+</resources>
